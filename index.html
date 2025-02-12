@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title> JavaScript Calculator </title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"; rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
+
+<body style="background-color: white;">
+
+<h1 style="color: black; font-family:'Courier New', Courier, monospace; text-align: center;"> Two-Variable Calculator </h1>    
+
+<div class="container" style="background-color: black; font-family:'Courier New', Courier, monospace; text-align: center; border-radius: 12px; border-style: dashed; border-width: 7px; border-color: grey"> 
+
+    <br>
+    
+    <details style="color: white ;">
+
+        <summary> How to Use the Calculator: </summary>
+
+        <p> Input any two numbers you want and click any of the buttons to use the operation stated. </p>
+
+    </details>
+
+    <br>
+
+    <form>
+
+        <label style="color: white;"> Enter your value of <i> a </i> : </label>
+
+        <input type="number" id="valueA" placeholder="Type value here...">
+
+        <br> <br>
+
+        <label style="color: white;"> Enter your value of <i> b </i> : </label>
+
+        <input type="number" id="valueB" placeholder="Type value here...">
+
+        <br> <br>
+
+        <div class="row"> 
+
+            <div class="col-md-3">
+            
+                <button type="button" onclick="multiplication()" style="background-color: yellow; color:black">  <i> a </i> times <i> b </i>: </button>
+
+            </div>
+
+            <br> <br>
+
+            <div class="col-md-3">
+
+                <button type="button" onclick="modulus()" style="background-color: red; color:white"> remainder of <i> a </i> and <i> b </i>: </button>
+
+            </div>
+
+            <br> <br>
+
+            <div class="col-md-3">
+
+                <button type="button" onclick="exponents()"  style="background-color: blue; color:white"> <i> a </i> raised to <i> b </i>: </button>
+
+            </div>
+
+            <br> <br>
+
+            <div class="col-md-3">
+
+                <button type="button" onclick="equality()"  style="background-color: green; color:white"> <i> a </i> is equal to <i> b </i>?: </button>
+
+            </div>
+
+        </div>
+
+        <br>
+
+    </form>
+
+    <script>
+
+        function multiplication(){
+
+            var prod1 = document.getElementById("valueA").value;
+
+            var prod2 = document.getElementById("valueB").value;
+
+            var product = Number(prod1) * Number(prod2);
+
+            document.getElementById("result").innerHTML = "Answer is" + " " + product;
+
+        }
+
+        function modulus(){
+
+            var mod1 = document.getElementById("valueA").value;
+
+            var mod2 = document.getElementById("valueB").value;
+
+            var remainder = Number(mod1) % Number(mod2);
+
+            document.getElementById("result").innerHTML = "Answer is" + " " + remainder;
+
+        }
+
+        function exponents(){
+
+            var raise1 = document.getElementById("valueA").value;
+
+            var raise2 = document.getElementById("valueB").value;
+
+            var exponential = Number(raise1) ** Number(raise2);
+
+            document.getElementById("result").innerHTML = "Answer is" + " " + exponential;
+
+        }
+
+        function equality(){
+
+            var equal1 = document.getElementById("valueA").value;
+
+            var equal2 = document.getElementById("valueB").value;
+
+            var equalto = Number(equal1) == Number(equal2);
+
+            document.getElementById("result").innerHTML = "Answer is" + " " + equalto;
+
+        }
+
+    </script>
+
+</div>
+
+<br>
+
+<h2 id="result" style="text-align: center; font-family:'Courier New', Courier, monospace;"> Result: </h2>
+
+</body>
+
+</html>
